@@ -65,6 +65,8 @@ p {
   border-radius: 5px;
   border: 1px solid lightgray;
   margin-bottom: 20px;
+  box-shadow: 3px 3px; /* Not in the original design, but I like the effect */
+}
 }
 
 .contact-form button {
@@ -128,5 +130,6 @@ p {
   }
 
   .row {
+
   }
 }
