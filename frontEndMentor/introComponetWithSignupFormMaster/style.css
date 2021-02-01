@@ -1,0 +1,132 @@
+/* Feel free to remove these styles or customise in your own stylesheet 👍 */
+/* Green color: #67CD8B */
+/* Blue color: #5D55A3 */
+/* Red color:  #ec7878 */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-image: url(images/bg-intro-desktop.png);
+  background-color: #ec7878;
+  color: #555;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding-top: 12%;
+}
+
+p {
+  font-size: 80%;
+  text-align: left;
+}
+
+#learn-to-code {
+  color: #fff;
+  text-align: left;
+}
+
+.contact-form {
+  color: #000;
+  display: block;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.contact-form ul {
+  list-style-type: none;
+}
+
+.contact-form input {
+  font-family: "Poppins", "Arial", sans-serif;
+  width: 80%;
+  padding: 10px 20px 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  margin-bottom: 20px;
+}
+
+.contact-form button {
+  margin-top: 20px;
+}
+
+.try-it {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 14px;
+  background-color: #5d55a3;
+  color: #fff;
+  border-radius: 5px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.try-it span {
+  font-weight: 600;
+}
+
+.btn {
+  background-color: #67cd8b;
+  display: inline-block;
+  padding: 10px 30px;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 300;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+#terms-of-service {
+  text-align: center;
+  font-size: 10px;
+  color: lightgray;
+}
+
+#terms-of-service span {
+  color: coral;
+  font-weight: 600;
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+@media only screen and (max-width: 375px) {
+  section {
+    padding: 25px 0;
+  }
+
+  .learn-to-code h1,
+  p {
+    text-align: center;
+  }
+
+  .try-it,
+  .contact-form {
+    width: 50%;
+  }
+
+  .row {
+  }
+}
