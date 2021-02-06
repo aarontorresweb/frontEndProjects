@@ -34,52 +34,52 @@ let validationElements = [
   elPasswordValidationMessage,
 ];
 let allowSubmit = false;
-let correctWord;
 
-const fixElName = function (e) {
-  const el = e.target.id;
-  const removeUnderline = el.replace("_", " ");
-  const splitWords = removeUnderline.split(" ");
-  // console.log(splitWords); // returns an array of the words.
-  correctWord = splitWords
-    .map((word) => {
-      return word[0].toUpperCase() + word.substring(1);
-    })
-    .join(" ");
+const fixName = function (e) {
+  const el = e.target;
+  console.log(el);
 };
 
 elName.addEventListener("focusout", function (e) {
   const el = e.target;
-  fixElName(e);
   if (el.value.length === 0) {
-    elNameValidationMessage.innerHTML = `'${correctWord}' cannot be empty.`;
+    console.log(`${el.id} cannot be empty.`);
+    elNameValidationMessage.innerHTML = `${el.id} cannot be empty.`;
   }
+  fixName(e);
 });
 
 elLastName.addEventListener("focusout", function (e) {
   const el = e.target;
-  fixElName(e);
   if (el.value.length === 0) {
-    elLastNameValidationMessage.innerHTML = `'${correctWord}' cannot be empty.`;
+    console.log(`${el.id} cannot be empty.`);
+    elLastNameValidationMessage.innerHTML = `${el.id} cannot be empty.`;
   }
+  fixName(e);
 });
 
 elEmail.addEventListener("focusout", function (e) {
   const el = e.target;
-  fixElName(e);
   if (el.value.length === 0) {
-    elEmailValidationMessage.innerHTML = `'${correctWord}' cannot be empty.`;
+    console.log(`${el.id} cannot be empty.`);
+    elEmailValidationMessage.innerHTML = `${el.id} cannot be empty.`;
     allowSubmit = false;
   } else if (elEmail.value.indexOf("@") === -1) {
+    console.log(
+      `Looks like this is not an e-mail. ${elEmail} needs to have the '@
+      ' symbol.`
+    );
     elEmailValidationMessage.innerHTML =
       "Looks like this is not an e-mail. Please include the @ symbol.";
   }
+  fixName(e);
 });
 
 elPassword.addEventListener("focusout", function (e) {
   const el = e.target;
-  fixElName(e);
   if (el.value.length === 0) {
-    elPasswordValidationMessage.innerHTML = `'${correctWord}' cannot be empty.`;
+    console.log(`${el.id} cannot be empty.`);
+    elPasswordValidationMessage.innerHTML = `${el.id} cannot be empty.`;
   }
+  fixName(e);
 });
