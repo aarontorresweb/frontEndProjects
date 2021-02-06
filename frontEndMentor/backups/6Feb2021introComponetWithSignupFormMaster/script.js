@@ -48,51 +48,47 @@ const fixName = function (e) {
     .join(" ");
 };
 
-const validateField = function (e) {
-  const el = e.target;
-  const validationElName = el.id.replace("_", "-");
-  const validationMessage = document.getElementById(
-    `${validationElName}-validation-message`
-  );
-  console.log(el);
-  console.log(el.id);
-  if (el.value.length === 0) {
-    validationMessage.innerHTML = `'${fixedName}' cannot be empty.`;
-  } else if (el.value.length > 0) {
-    validationMessage.innerHTML = ` `;
-    allowSubmit = true;
-  }
-};
-
 elName.addEventListener("focusout", function (e) {
   const el = e.target;
   fixName(e);
-  validateField(e);
+  if (el.value.length === 0) {
+    elNameValidationMessage.innerHTML = `'${fixedName}' cannot be empty.`;
+  } else if (el.value.length > 0) {
+    elNameValidationMessage.innerHTML = ` `;
+  }
 });
 
 elLastName.addEventListener("focusout", function (e) {
   const el = e.target;
   fixName(e);
-  validateField(e);
+  if (el.value.length === 0) {
+    elLastNameValidationMessage.innerHTML = `'${fixedName}' cannot be empty.`;
+  } else if (el.value.length > 0) {
+    elLastNameValidationMessage.innerHTML = ` `;
+  }
 });
 
 elEmail.addEventListener("focusout", function (e) {
   const el = e.target;
 
   fixName(e);
-  validateField(e);
-  if (elEmail.value.indexOf("@" === -1)) {
+  if (el.value.length === 0) {
+    elEmailValidationMessage.innerHTML = `'${fixedName}' cannot be empty.`;
+    allowSubmit = false;
+  } else if (elEmail.value.indexOf("@" === -1)) {
     elEmailValidationMessage.innerHTML =
       "Looks like this is not an e-mail. Please include the @ symbol.";
-    allowSubmit = false;
   } else {
     elEmailValidationMessage.innerHTML = ` `;
-    allowSubmit = true;
   }
 });
 
 elPassword.addEventListener("focusout", function (e) {
   const el = e.target;
   fixName(e);
-  validateField(e);
+  if (el.value.length === 0) {
+    elPasswordValidationMessage.innerHTML = `'${fixedName}' cannot be empty.`;
+  } else if (el.value.length > 0) {
+    elPasswordValidationMessage.innerHTML = ` `;
+  }
 });
