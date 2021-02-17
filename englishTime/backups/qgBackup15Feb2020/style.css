@@ -1,0 +1,49 @@
+body {
+  /* background-image: url(images/colorSwirl.jpeg); */
+  background-color: #ec7878;
+  color: #555;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding-top: 12%;
+}
+
+p {
+  font-size: 80%;
+  text-align: left;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 5vh;
+}
+
+#image-btn,
+#picture-text-btn {
+  background-color: #67cd8b;
+  display: inline-block;
+  padding: 10px 30px;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 300;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+#picture {
+  border-radius: 20%;
+  overflow: hidden;
+}

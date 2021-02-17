@@ -89,9 +89,10 @@ p {
   font-weight: 600;
 }
 
-#validation-message, #validation-message p {
+.validation-message {
   text-align: center;
   color: red;
+  margin-top: 0;
 }
 
 .btn {

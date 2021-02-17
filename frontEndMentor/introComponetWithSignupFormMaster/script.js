@@ -34,21 +34,21 @@ let validationElements = [
   elPasswordValidationMessage,
 ];
 let allowSubmit = false;
-let fixedName;
 
 const fixName = function (e) {
   const el = e.target.id;
   const removeUnderline = el.replace("_", " ");
   const splitWords = removeUnderline.split(" ");
   // console.log(splitWords); // returns an array of the words.
-  fixedName = splitWords
+  // fixedName = splitWords
+  return splitWords
     .map((word) => {
       return word[0].toUpperCase() + word.substring(1);
     })
     .join(" ");
 };
 
-const validateField = function (e) {
+const validateField = function (e, name) {
   const el = e.target;
   const validationElName = el.id.replace("_", "-");
   const validationMessage = document.getElementById(
@@ -57,7 +57,7 @@ const validateField = function (e) {
   console.log(el);
   console.log(el.id);
   if (el.value.length === 0) {
-    validationMessage.innerHTML = `'${fixedName}' cannot be empty.`;
+    validationMessage.innerHTML = `'${name}' cannot be empty.`;
   } else if (el.value.length > 0) {
     validationMessage.innerHTML = ` `;
     allowSubmit = true;
@@ -65,23 +65,16 @@ const validateField = function (e) {
 };
 
 elName.addEventListener("focusout", function (e) {
-  const el = e.target;
-  fixName(e);
-  validateField(e);
+  validateField(e, fixName(e));
 });
 
 elLastName.addEventListener("focusout", function (e) {
-  const el = e.target;
-  fixName(e);
-  validateField(e);
+  validateField(e, fixName(e));
 });
 
 elEmail.addEventListener("focusout", function (e) {
-  const el = e.target;
-
-  fixName(e);
-  validateField(e);
-  if (elEmail.value.indexOf("@" === -1)) {
+  validateField(e, fixName(e));
+  if (elEmail.value.indexOf("@") === -1) {
     elEmailValidationMessage.innerHTML =
       "Looks like this is not an e-mail. Please include the @ symbol.";
     allowSubmit = false;
@@ -92,7 +85,5 @@ elEmail.addEventListener("focusout", function (e) {
 });
 
 elPassword.addEventListener("focusout", function (e) {
-  const el = e.target;
-  fixName(e);
-  validateField(e);
+  validateField(e, fixName(e));
 });
