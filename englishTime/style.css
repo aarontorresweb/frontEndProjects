@@ -68,6 +68,8 @@ h1 {
 .picture-display {
   text-align: center;
   width: 66%;
+  display: flex;
+  flex-direction: column;
 }
 
 .picture-display #answer-btn {
@@ -76,12 +78,4 @@ h1 {
   box-sizing: border-box;
   margin: 20px auto 0;
   background-color: #266150;
-}
-
-.picture-display {
-  display: flex;
-  flex-direction: column;
-}
-
-#answer .btn {
 }
