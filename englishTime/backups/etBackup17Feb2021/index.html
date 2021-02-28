@@ -1,0 +1,38 @@
+<!-- DOCTYPE HTML -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" type="text/css" href="style.css" /> 
+    <link rel="stylesheet" type="text/css" href="grid.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Image Generator</title>
+  </head>
+  <body>
+    <h1>Click for an image!</h1>
+    <div class="col span-1-of-2"></div>
+      <button class="btn" id="picture-text-btn">Get Word</button>
+      <button class="btn" id="image-btn">Random Image</button>
+      <button class="btn" id="landscapes-btn">Landscapes</button>
+      <button class="btn" id="animals-btn">Animals</button>
+      <button class="btn" id="time-btn">Time</button>
+    </div>
+    <div class="col span-1-of-2 picture-display">
+      <img id="picture" src="images/landscape/landscape1.jpeg" />
+      <p id="picture-text"></p>
+    </div>
+
+  </body>
+  <script src="script.js"></script>
+</html>
