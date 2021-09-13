@@ -1,0 +1,79 @@
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  color: rgb(211, 207, 207);
+}
+
+#wrapper {
+  box-sizing: border-box;
+  width: 1000px;
+  height: 500px;
+  margin: 50px auto 50px;
+  /* margin-top: 20%;
+      margin-bottom: 20%; */
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.col {
+  float: left;
+  width: 33.33%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.button {
+  background-color: #fff;
+  display: inline-block;
+  padding: 10px 30px;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 300;
+  color: #000;
+  border-radius: 200px;
+  border: none;
+  /* margin-bottom: 10px; */
+  margin: 200px auto;
+  display: block;
+}
+
+#sedan-button {
+  color: hsl(31, 77%, 52%);
+}
+
+#suv-button {
+  color: hsl(184, 100%, 22%);
+}
+
+#luxury-button {
+  color: hsl(184, 100%, 22%);
+}
+
+#sedan {
+  background-color: hsl(31, 77%, 52%);
+}
+
+#suv {
+  background-color: hsl(184, 100%, 22%);
+}
+
+#luxury {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.content {
+  padding: 0 auto;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

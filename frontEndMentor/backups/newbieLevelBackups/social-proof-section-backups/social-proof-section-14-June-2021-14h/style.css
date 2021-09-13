@@ -1,0 +1,97 @@
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+}
+
+main {
+  padding: 100px 100px 100px 100px;
+}
+
+h1 {
+  color: var(--very-dark-magenta);
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+}
+
+.top-left {
+  max-width: 50%;
+}
+
+.top-left h1 {
+  padding-bottom: 10px;
+}
+
+.top-left p {
+  color: var(--dark-grayish-magenta);
+  padding-bottom: 50px;
+}
+
+.top-right {
+  max-width: 50%;
+}
+
+.top-right ul li {
+  color: var(--very-dark-magenta);
+}
+
+ul {
+  list-style: none;
+}
+
+.testimonials {
+  display: flex;
+}
+
+.testimonial-boxes {
+  display: flex;
+  margin: 25px 25px 25px 25px;
+}
+
+.testimonials p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.testimonials-left,
+.testimonials-center,
+.testimonials-right {
+  background: var(--very-dark-magenta);
+  border-radius: 10px;
+  box-shadow: 1px 1px #000000;
+}
+.testimonials-left {
+  margin-right: 30px;
+}
+
+.testimonials-center {
+  margin-right: 30px;
+}
+
+.testimonials-right {
+  /* Styles here. */
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding-top: 20px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

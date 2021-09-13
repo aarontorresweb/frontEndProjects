@@ -1,0 +1,192 @@
+:root {
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+header {
+  padding: 50px 30px 0 30px;
+  height: auto;
+}
+
+header img {
+  /* width: 150px; */
+  padding-bottom: 40px;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+}
+
+.container .left {
+  width: 100%;
+  height: auto;
+  padding: 50px 30px 0 30px;
+  text-align: center;
+}
+
+.container .right {
+  width: 100%;
+  height: 250px;
+  background-image: url(./images/hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.container .left h1 {
+  font-size: 3.2rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: var(--desaturated-red);
+  line-height: 4rem;
+  letter-spacing: 0.5rem;
+}
+
+.container .left h1 span {
+  color: var(--dark-grayish-red);
+  font-weight: 450;
+}
+
+.container .left p {
+  color: var(--desaturated-red);
+  line-height: 1.5rem;
+  max-width: 450px; /* Sets the max width of the 'p' element. */
+  margin: 0 auto; /* Sets the 'p' element to always be in the center. */
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.container form {
+  position: relative;
+  display: block;
+  height: 50px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.container form input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border-radius: 50px;
+  left: 0;
+  top: 0;
+  border: 1px solid; /* It should be this color 'hsl(0, 36%, 70%', but it throws an error. */
+  padding-left: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.1rem;
+}
+
+.container form button {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 70px;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  box-shadow: 0px 0px 20px 1px hsl(0, 36%, 70%, 0.466);
+}
+
+.container form button:hover {
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 80%, 86%),
+    hsl(0, 52%, 80%, 0.781)
+  );
+  transition: width 3s;
+  box-shadow: 0px 0p 13px 2x #f4aaabbf;
+}
+
+.container form input::placeholder {
+  color: hsl(0, 36%, 70%);
+  opacity: 0.8;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    position: absolute;
+    padding-left: 10%;
+  }
+
+  header img {
+    width: 100%;
+  }
+
+  .container {
+    flex-direction: row;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .container .right {
+    width: 80%;
+    height: 100vh;
+    background-image: url(./images/hero-desktop.jpg);
+  }
+
+  .container .left {
+    width: 100%;
+    height: 100vh;
+    padding-top: 30vh;
+    text-align: left;
+    padding-left: 10%;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .container .left h1 {
+    font-size: 5rem;
+    line-height: 5.5rem;
+  }
+
+  .container .left p {
+    margin-left: 0;
+    font-size: 1.1rem;
+  }
+
+  .container form {
+    margin-left: 0;
+  }
+
+  .container form button {
+    width: 80px;
+  }
+}
